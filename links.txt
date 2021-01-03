@@ -1,0 +1,9 @@
+https://source.unsplash.com/1200x500/?typing
+https://logomaker.thehoth.com/#
+scripts": {
+    "start": "nodemon app.js",
+    "backend":"nodemon app.js",
+    "frontend":"npm run front --prefix Frontend",
+    "dev":"concurrently \"npm run Backend\" \"npm run start --prefix Frontend\"",
+    "heroku-postbuild":"npm install --prefix Frontend && npm run build --prefix Frontend"
+  }
