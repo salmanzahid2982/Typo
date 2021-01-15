@@ -6,27 +6,27 @@ const app = express()
 const bodyParser = require("body-parser");
 const login=require('./Backend/routes/login');
 
-//DB Connection with mongodb
-  // mongoose
-  // .connect(process.env.DATABASE, {
-  //   useNewUrlParser: true,
-  //   useUnifiedTopology: true,
-  //   useCreateIndex: true
-  // })
-  // .then(() => {
-  //   console.log("DB CONNECTED");
-  // }).
-  // catch((err)=>{console.log(err)});
-
-mongoose
-  .connect(process.env.mongoUrl,
-  { useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true})
+// DB Connection with mongodb
+  mongoose
+  .connect(process.env.DATABASE, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true
+  })
   .then(() => {
     console.log("DB CONNECTED");
   }).
   catch((err)=>{console.log(err)});
+
+// mongoose
+//   .connect(process.env.mongoUrl,
+//   { useNewUrlParser: true,
+//   useUnifiedTopology: true,
+//   useCreateIndex: true})
+//   .then(() => {
+//     console.log("DB CONNECTED");
+//   }).
+//   catch((err)=>{console.log(err)});
   
   
 

@@ -16,7 +16,6 @@ const Header=()=> {
                 <a class="mr-5 hover:text-white" href="">SignUp</a>
                 <a class="mr-5 hover:text-white" href="">Login</a>
                 <a class="mr-5 hover:text-white" href="">SignOut</a>
-                <a class="mr-5 hover:text-white" href="">              <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src={profile} /></a>
               </nav>
             </div>
           </header>

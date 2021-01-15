@@ -3,22 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-  "engine":{
-    "node":"v10.14.1",
-    "npm":"6.14.10"
+  "engine": {
+    "node": "v10.14.1",
+    "npm": "6.14.10"
   },
   "scripts": {
-    "start": "nodemon app.js",
-    "backend":"nodemon app.js",
-    "frontend":"npm run front --prefix Frontend",
-    "dev":"concurrently \"npm run Backend\" \"npm run start --prefix Frontend\"",
-    "heroku-postbuild":"npm install --prefix Frontend && npm run build --prefix Frontend"
+    "start": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "bootstrap": "^4.5.3",
     "cookie-parser": "^1.4.4",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",

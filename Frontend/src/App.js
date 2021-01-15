@@ -1,12 +1,15 @@
 //import React, { useState } from "react";
 import './App.css';
-import Base from "./core/Base";
+import Home from './core/Home';
+import Signup from './Signup';
+import Typo from './typoComponents/Typo';
 //import Signup from "./Signup";
 
 const App=() =>{
   return (
     <div>  
-      <Base/>
+      <Typo>
+      </Typo>
     </div>
   );
 }
