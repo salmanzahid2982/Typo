@@ -1,9 +1,9 @@
-var localpath="http://localhost:8000/api/"
-//var Herokupath="api/"
+//var localpath="http://localhost:8000/api/"
+var Herokupath="api/"
 
 export const signUp=user=>{
     //console.log(user);
-    return fetch(`${localpath}/signup`,{
+    return fetch(`api//signup`,{
         method: "POST",
         headers: {
             Accept: "application/json",
