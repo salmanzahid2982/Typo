@@ -2,7 +2,7 @@ import React from 'react'
 
 const Speed=({sec,symbols})=> {
 
-    const wpm=(sec/5)/(symbols/60);
+    const wpm=(symbols/5)/(sec/60);
     if(sec!==0 && symbols!==0)
     {   
         return(

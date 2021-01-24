@@ -1,43 +1,28 @@
-import React,{ useState,useRef,useEffect } from 'react'
+import React,{ useState,useRef } from 'react'
 
 import Base from '../core/Base.js'
 import Preview from './Preview.js'
 import Speed from './Speed.js'
 
 const Typo=()=> {
-    //const interval = useRef(null);
+    const interval = useRef(null);
 
-    const [isActive, setIsActive] = useState(false);
+   const [isActive, setIsActive] = useState(false);
+    const [started, setStarted] = useState(false);
+    const [finished, setFinished] = useState(false);
+
     const [values, setValues] = useState
     (
-        {text:"Test",
+        {
+        text:"The Eisenhower ineterstate system requires that one-mile in every five must be straight. These straight sections are usable as airstrips and in times of war or other emergencies. The water of Angel Falls (the World's highest) in Venzuela drops 3,212 feet (979 meters). They are 15 times higher than Niagra Falls",
         userInput:"",
         error:false,
         symbols:0,
-        sec:0,
-        started:false,
-        finished:false
+        sec:0
         }
     )
-
-    useEffect(() => {
-        const interval = null;
-        if (isActive) {
-            interval = setInterval(() => {
-                setValues(prevProps => (
-                {
-                    ...prevProps,
-                     sec: prevProps.sec + 1
-                    
-                }))
-          }, 1000);
-        } else if (setIsActive(!isActive)) {
-          clearInterval(interval);
-          setValues({...values,finished:true});
-        }
-      }, []);
       
-    const{text,userInput,symbols,sec,started,finished}=values;
+    const{text,userInput,symbols,sec}=values;
 
     const onRestart=event=>{
         event.preventDefault();
@@ -57,26 +42,26 @@ const Typo=()=> {
 
     const setTime=()=> {
         if (!started) {
-            setValues({ ...values, started: true })
-            // interval.current = setInterval(() => {
-            //     setValues(prevProps => (
-            //     {
-            //         ...prevProps,
-            //          sec: prevProps.sec + 1
+            setStarted(true)
+            interval.current = setInterval(() => {
+                setValues(prevProps => (
+                {
+                    ...prevProps,
+                     sec: prevProps.sec + 1
                     
-            //     }))
-            // }, 1000)
-            setIsActive(!isActive);
+                }))
+            }, 1000)
+            setIsActive(true);
         }
     }
 
     const onFinish=UI=>{
         if(UI===text)
         {  
-            // clearInterval(interval.current);
-            // console.log("clear interval executed successfully");
+            clearInterval(interval.current);
+            console.log("clear interval executed successfully");
             setIsActive(!isActive);
-            // setValues({...values,finished:true})
+            setFinished(true)
         }
         return
     }

@@ -1,0 +1,5 @@
+The Eisenhower ineterstate system requires that one-mile in every five must be straight. 
+These straight sections are usable as airstrips and in times of war or other emergencies. 
+The water of Angel Falls (the World's highest) in Venzuela drops 3,212 feet (979 meters). 
+They are 15 times higher than Niagra Falls. Theatres in Glendale, California can show horror 
+films only on Monday, Tuesday, or Wednesday.
