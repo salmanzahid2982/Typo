@@ -3,7 +3,7 @@ var Herokupath="api/"
 
 export const signUp=user=>{
     //console.log(user);
-    return fetch(`api/signup`,{
+    return fetch(`${Herokupath}/signup`,{
         method: "POST",
         headers: {
             Accept: "application/json",

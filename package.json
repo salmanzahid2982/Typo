@@ -8,7 +8,11 @@
     "npm": "6.14.10"
   },
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "backend":"nodemon app.js",
+    "frontend":"npm run front --prefix Frontend",
+    "dev":"concurrently \"npm run Backend\" \"npm run start --prefix Frontend\"",
+    "heroku-postbuild":"npm install --prefix Frontend && npm run build --prefix Frontend"
   },
   "keywords": [],
   "author": "",
